@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>Discord Profile Card Generator</title>
+  </head>
+  <body class="bg-dark d-flex flex-column vh-100">
+    <header class="py-5">
+      <h1 class="text-white custom-font text-center">Discord Profile Card Generator</h1>
+    </header>
+    <main style="flex: 1">
+      <div class="d-flex flex-column pb-5">
+        <div class="align-self-center" style="min-width: 300px; width: 300px; max-width: 300px">
+          <div id="capture" class="card bg-transparent border-0 rounded-3 overflow-hidden">
+            <div class="card-img rounded-0 position-relative" style="z-index: 2">
+              <label for="icon-upload" data-size="100x100" class="bg-quarternary border border-quarternary border-5 rounded-circle d-inline-block ms-3 overflow-hidden position-absolute start-0" style="bottom: -50px; height: 100px; width: 100px; z-index: 2"><img id="icon-img" src="images/icon-img.jpg" class="h-100 w-100" alt="" /></label>
+              <input type="file" id="icon-upload" class="d-none" />
+              <label for="banner-upload" data-size="600x240" class="bg-quarternary position-relative" style="height: 120px; width: 300px"><img id="banner-img" class="h-100 w-100" src="images/banner-img.jpg" alt="" /></label>
+              <input type="file" id="banner-upload" class="d-none" />
+            </div>
+            <div class="card-body bg-quarternary rounded-0 position-relative" style="padding-top: calc(0.5rem + 50px)">
+              <div class="badge bg-tertiary d-inline-block fw-normal m-3 p-2 position-absolute top-0 end-0"><div contenteditable class="d-inline-block">Username</div>#<div contenteditable class="d-inline-block">ID</div></div>
+              <div contenteditable class="card-title h5 text-white custom-font mb-0">Nickname</div>
+              <div class="card-subtitle h6 text-light mb-2">aka "<div contenteditable class="d-inline-block">Alias</div>"</div>
+              <div contenteditable class="card-text text-light fs-7">About me text goes here.</div>
+            </div>
+          </div>
+          <button id="capture-btn" type="button" class="btn btn-secondary rounded-3 my-2 w-100">Capture</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer" class="d-flex justify-content-center">
+        <p class="text-light d-inline-block m-0 px-3 py-5 text-center">This website was designed by <a href="https://github.com/H3K83" target="_blank" title="Hekate">Hekate</a> and is licensed under a Creative Commons <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-No Derivatives 4.0 International">BY-NC-ND 4.0 International License</a>.</p>
+      </div>
+    </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/html2canvas/dist/html2canvas.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

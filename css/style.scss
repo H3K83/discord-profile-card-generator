@@ -1,0 +1,85 @@
+$primary: #36393f;
+$secondary: #2f3136;
+$tertiary: #292B2F;
+$quarternary: #18191C;
+$light: #bfbfbf;
+$dark: #202225;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "quarternary": $quarternary,
+  "light": $light,
+  "dark": $dark
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$custom-font: "Catamaran", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+[contenteditable]:focus-visible {
+  outline: none !important;
+}
+
+a,
+a:link,
+a:visited {
+  color: $light;
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  color: $white;
+  text-decoration: underline;
+}
+
+.custom-font {
+  font-family: $custom-font;
+}
+
+.fs-7 {
+  font-size: .85rem;
+}
+
+label[for="icon-upload"]:before,
+label[for="banner-upload"]:before {
+  background-color: rgba($black, 0.5);
+  content: "";
+  display: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+label[for="icon-upload"]:after,
+label[for="banner-upload"]:after {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-images' viewBox='0 0 16 16'><path d='M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z'/><path d='M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z'/></svg>");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  color: $white;
+  content: attr(data-size);
+  display: none;
+  font-size: 0.85rem;
+  padding-top: calc(24px + 0.05rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+label[for="icon-upload"]:hover:before,
+label[for="banner-upload"]:hover:before {
+  display: block;
+}
+
+label[for="icon-upload"]:hover:after,
+label[for="banner-upload"]:hover:after {
+  display: inline-block;
+}
