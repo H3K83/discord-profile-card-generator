@@ -22,6 +22,11 @@ $custom-font: "Catamaran", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   outline: none !important;
 }
 
+.btn-check:focus + .btn-secondary, .btn-secondary:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 a,
 a:link,
 a:visited {
