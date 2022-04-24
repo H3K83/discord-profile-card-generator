@@ -14,18 +14,14 @@ $theme-colors: (
   "dark": $dark
 );
 
+$btn-focus-box-shadow: none;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 $custom-font: "Catamaran", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
 [contenteditable]:focus-visible {
   outline: none !important;
-}
-
-.btn-check:focus + .btn-secondary,
-.btn-secondary:focus {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
 }
 
 a,
