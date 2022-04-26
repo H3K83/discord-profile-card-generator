@@ -1,9 +1,3 @@
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -3172,7 +3166,7 @@ textarea.form-control-lg {
       -ms-user-select: none;
           user-select: none;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 0 solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25rem;
@@ -3768,8 +3762,8 @@ fieldset:disabled .btn {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  border: 0 solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.3rem;
 }
 
 .dropdown-menu[data-bs-popper] {
@@ -4025,8 +4019,8 @@ fieldset:disabled .btn {
 }
 
 .dropdown-menu-dark {
-  color: #dee2e6;
-  background-color: #343a40;
+  color: #fff;
+  background-color: #2f3136;
   border-color: rgba(0, 0, 0, 0.15);
 }
 
@@ -4036,7 +4030,7 @@ fieldset:disabled .btn {
 
 .dropdown-menu-dark .dropdown-item:hover, .dropdown-menu-dark .dropdown-item:focus {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #26272b;
 }
 
 .dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active {
@@ -4109,7 +4103,7 @@ fieldset:disabled .btn {
 
 .btn-group > .btn:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
-  margin-left: -1px;
+  margin-left: 0;
 }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
@@ -4170,7 +4164,7 @@ fieldset:disabled .btn {
 
 .btn-group-vertical > .btn:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
-  margin-top: -1px;
+  margin-top: 0;
 }
 
 .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
@@ -11716,6 +11710,24 @@ fieldset:disabled .btn {
   box-shadow: none !important;
 }
 
+.collapsing {
+  display: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.custom-font {
+  font-family: "Catamaran", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+}
+
+.dropdown-item {
+  text-decoration: none !important;
+}
+
+.fs-7 {
+  font-size: .85rem !important;
+}
+
 a,
 a:link,
 a:visited {
@@ -11727,14 +11739,6 @@ a:hover,
 a:active {
   color: #fff;
   text-decoration: underline;
-}
-
-.custom-font {
-  font-family: "Catamaran", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-.fs-7 {
-  font-size: .85rem;
 }
 
 label[for="icon-upload"]:before,
@@ -11777,5 +11781,16 @@ label[for="banner-upload"]:hover:before {
 label[for="icon-upload"]:hover:after,
 label[for="banner-upload"]:hover:after {
   display: inline-block;
+}
+
+#capture-btn-group .dropdown-item {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-check-circle' viewBox='0 0 16 16'><path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z'/></svg>");
+  background-position: calc(100% - 1rem) center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+#capture-btn-group .dropdown-item.collapsed {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-circle' viewBox='0 0 16 16'><path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/></svg>");
 }
 /*# sourceMappingURL=style.css.map */

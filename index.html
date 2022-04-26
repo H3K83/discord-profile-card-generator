@@ -26,11 +26,18 @@
             <div class="card-body bg-quarternary rounded-0 position-relative" style="padding-top: calc(0.5rem + 50px)">
               <div class="badge bg-tertiary d-inline-block fw-normal m-3 p-2 position-absolute top-0 end-0"><div contenteditable class="d-inline-block">Username</div>#<div contenteditable class="d-inline-block">ID</div></div>
               <div contenteditable class="card-title h5 text-white custom-font mb-0">Nickname</div>
-              <div class="card-subtitle h6 text-light mb-2">aka "<div contenteditable class="d-inline-block">Alias</div>"</div>
-              <div contenteditable class="card-text text-light fs-7">About me text goes here.</div>
+              <div id="alias" class="card-subtitle h6 text-light collapse show">aka "<div contenteditable class="d-inline-block">Alias</div>"</div>
+              <div contenteditable id="quote" class="card-text text-light fs-7 mt-2 collapse show">About me text goes here.</div>
             </div>
           </div>
-          <button id="capture-btn" type="button" class="btn btn-secondary rounded-3 my-1 w-100">Download</button>
+          <div id="capture-btn-group" class="btn-group dropup d-flex my-1" role="group">
+            <button id="capture-btn" type="button" class="btn btn-secondary rounded-start-3 flex-grow-1">Capture</button>
+            <button id="settings-btn" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split rounded-end-3" data-bs-toggle="dropdown" aria-expanded="false" style="flex: 0"></button>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="settings-btn">
+              <li><a class="dropdown-item" data-bs-toggle="collapse" href="#alias" role="button" aria-expanded="true" aria-controls="alias">Alias</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="collapse" href="#quote" role="button" aria-expanded="true" aria-controls="quote">Quote</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </main>
